@@ -1,4 +1,3 @@
 # javascript basic
 
-This study is to make a strong basement for my frontend technology study.
-I have a plan to study it every 30m to 1h.
+This is to study a strong basement quickly for my frontend technology knowledge. I need to study it to figure out how much different it is with other languages before studying react.
