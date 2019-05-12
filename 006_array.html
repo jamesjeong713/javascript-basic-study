@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>array</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function get_members() {
+            return ["james", "john", "sandra"];
+        }        
+        var members = get_members();
+        // DO NOT USE length with ()
+        // even in java, it uses length to count array
+        // about length(), it will count length of string
+        // reference: https://www.geeksforgeeks.org/length-vs-length-java/
+        for (var i = 0; i < members.length; i ++) {
+            document.write(members[i].toUpperCase() + ', ');            
+        }
+    </script>
+</body>
+</html>

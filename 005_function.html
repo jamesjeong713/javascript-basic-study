@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>function()</title>
+    </head>
+    <body>
+        <script type = "text/javascript">
+        document.write("numbering = function() <br />");
+        numbering = function() {
+            var i = 0;
+            while (i < 10) {
+                document.write(i);
+                i++;
+            }
+        }
+        numbering();
+        // same with it below
+        document.write("<br /><br /> function numbering() <br />");
+        function numbering() {
+            var i = 0;
+            while (i < 10) {
+                document.write(i);
+                i++;
+            }
+        }
+        numbering();
+        // same with it below: decalre and calling together
+        // anonymous function
+        document.write("<br /><br /> (function () { <br />");
+        (function () {
+            var i = 0;
+            while (i < 10) {
+                document.write(i);
+                i++;
+            }
+        })();
+        </script>
+    </body>
+</html>
