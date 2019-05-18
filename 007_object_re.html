@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Object repeat</title></head>
+    <body>
+        <script type = "text/javascript">
+            var grades = {'james': 90, 'seongyeop': 97, 'sandra': 81};
+            console.log(grades['james']);
+            document.write(grades['seongyeop']);
+            // console.log(grades);
+            for (var name in grades) {
+                console.log(name, this.grades[name]);
+            }
+            console.log('-------------------grades2-------------------');
+            var grades2 = {
+                'list' : {'james': 99, 'seongyeop':100, 'unknown': 10},
+                'functionTest': function() {
+                    for (var name in this.list) {
+                        console.log(name, this.list[name]);
+                    }
+                }
+            }
+            console.log(grades2['list']);
+            grades2['functionTest']();
+            // grades2.functionTest(); // same with grades2['functionTest']();
+            console.log(grades2['list'][1]); // NO WORK because of key values in javascript
+            console.log(grades2['list']['james']);
+        </script>
+    </body>
+</html>

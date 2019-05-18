@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Object</title></head>
+    <body>
+        <script type="text/javascript">
+            var grades = {
+                'list' : {'james': 10, 'jeong':8, 'goliard13': 80},
+                'show' : function() {
+                    alert('Hello World');
+                },
+                'showThis' : function() {
+                    for (var name in this.list) {
+                        console.log(name, this.list[name]);
+                    }
+                    console.log(this.list); // grades['list'];
+                }
+            }
+            grades.showThis();
+            grades['showThis']();
+            // grades.show();
+            console.log(grades['list']['james']);
+            // grades['list']['jeong'];
+
+        </script>
+    </body>
+</html>
