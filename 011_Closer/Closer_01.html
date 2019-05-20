@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <script type="text/javascript">
+        function outter1() {
+         //same with local variable
+            function inner1() {
+                var title = 'first coding everyday';
+                console.log(title);
+            }
+            inner1()
+        }    
+        outter1();
+        
+        // same with above
+        function outter2() {
+            // local variable
+            var inner2 = function() {
+                console.log('second coding everyday');
+            }();
+            // inner2();
+        }
+        outter2();
+
+        function outter3() {
+            var title = 'third coding everyday';
+            function inner3() {
+                var title = 'third - local variable';
+                console.log(title);
+            }
+            inner3();
+        }
+        outter3();
+    </script>
+</body>
+</html>

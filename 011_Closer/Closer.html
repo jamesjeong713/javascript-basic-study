@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var arr = []
+        for (var i = 0; i <= 5; ++i) {
+            console.log(i);
+            arr[i] = function() {
+                console.log("inside of for: " + i);
+                return i;
+            }
+        }
+        for (var index in arr) {
+            console.log("index: " + index);
+            arr[index]();
+            // console.log(arr[index]())
+        }
+
+        var arr1 = []
+        for (var i = 0; i < 5; i++) {
+            arr1[i] = function() {
+                return function () {
+                    return i;
+                }
+            }();
+        }   
+        for (var index in arr1) {
+            console.log(arr1[index]())
+        }
+
+        var arr2 = []
+        for (var i = 0; i < 5; i++) {
+            arr2[i] = function(id) {
+                return function () {
+                    return id;
+                }
+            }(i);
+        }    
+        for (var index in arr2) {
+            console.log(arr2[index]())
+        }
+    </script>
+</body>
+</html>

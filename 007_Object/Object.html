@@ -4,6 +4,7 @@
     <body>
         <script type="text/javascript">
             var grades = {
+                
                 'list' : {'james': 10, 'jeong':8, 'goliard13': 80},
                 'show' : function() {
                     alert('Hello World');
@@ -18,8 +19,15 @@
             grades.showThis();
             grades['showThis']();
             // grades.show();
-            console.log(grades['list']['james']);
+            console.log("grades['list']['james']: " + grades['list']['james']);
             // grades['list']['jeong'];
+            // object array test
+            var member = ['Name', 'Number', 'Address'];
+            console.log("Object array test---------");
+            for (var name in member) {
+                document.write(member[name] + ', '); 
+                console.log(member[name]);
+          }
 
         </script>
     </body>
