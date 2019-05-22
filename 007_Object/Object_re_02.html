@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Object repeat</title></head>
+    <body>
+        <script type = "text/javascript">
+            var grades = {"james": 90, "seongyeop": 99, "sandra": 88};
+            
+            grades.jeong = 100;
+            document.write("jeong" + grades.jeong + "<br/>");
+            document.write("james" + grades["james"] + "<br/>");
+
+            for (var name in grades) {
+                document.write(name + ": " + grades[name] + "<br/>");
+            }
+
+            document.write("-----------------------------<br/>");
+            var jobs = {
+                "programmer": "seongyeop",
+                "game designer": "jeong",
+                "genius": "james",
+
+                "functionTest": function() {
+                    for (var element in this.jobs) {
+                        console.log(element + ": " + this.jobs[element]);
+                    }
+                }
+            }
+
+            for (var job in jobs) {
+                document.write(job + ": " + jobs[job] + "<br/>");
+            }
+            document.write("<br/>");
+            jobs['functionTest']();
+            document.write("-----------------------------<br/>");
+            var grades2 = {
+                'list' : {'james': 99, 'seongyeop':100, 'unknown': 10},
+                'functionTest': function() {
+                    for (var name in this.list) {
+                        document.write(name + ": " + this.list[name] + " ");
+                    }
+                }
+            }
+            document.write(grades2['list'].james + "<br/>");
+            document.write(grades2['list']['james']+ "<br/>");
+            document.write("-----------------------------<br/>");
+            document.write(grades2.functionTest() + " <br/>"); // Object 자체를 뽑아내는 듯
+            grades2.functionTest();
+            // document.write("<br/>")
+            // grades2.functionTest(); // same with grades2['functionTest']();
+            // document.write(grades2['list'][1]); // NO WORK because of key values in javascript
+            // document.write("<br/>")
+
+        </script>
+    </body>
+</html>

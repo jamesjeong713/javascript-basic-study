@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        function setColor(color) {
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length) {
+                alist[i].style.color = 'blue';
+                i = i + 1;
+            }
+        }
+
+        function backgroundColor(color) {
+            document.querySelector('body').style.backgroundColor = color;
+        }
+
+        function bodySetColor(color) {
+            document.querySelector('body').style.color = color;
+        }
+
+        function bodySetValue(value) {
+            document.querySelector('body').self.value = value;
+        }
+    // self => whatever name is ok. just should get global value from onclick method(this)
+        function nightHandler(self) { // this value is going here
+            var target = document.querySelector('body');
+            if (self.value === 'night') {
+                backgroundColor('black');
+                bodySetColor('white');
+                bodySetValue('day');
+                setColor('powderblue');
+            } else {
+                backgroundColor('white');
+                bodySetColor('black');
+                bodySetValue('night');
+                setColor('powderblue');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1><a href="#">WEB</a></h1>
+    <input id="night_day" type="button" value="night" onclick="nightHandler(this);">
+
+    TEST
+</body>
+</html>
