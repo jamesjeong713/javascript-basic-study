@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello</h1>
+    <h1>goodbye</h1>
+    <ul>
+        <li id="hightlight">List Item 1</li>
+        <li class="bolded">List Item 2</li>
+        <li class="bolded">List Item 3</li>
+    </ul>
+
+    <h3>Test for selector</h3>
+    <ol>
+        <li>document.getElementById</li>
+        - nice shortcut. if you use "console.dir(tag)", it shows you whole obj
+        <ul>
+            <li>var tag = document.getElementById("hightlight");</li>
+            <li>tag</li>
+        </ul>
+        
+        <li>getElementsByClassName</li>
+        - Technically it's not an array. it is something called a node list which is array like.
+        <ul>
+            <li>var tags = document.getElementsByClassName("bolded");</li>
+            <li>tags</li>
+        </ul>
+        <li>getElementByTagName</li>
+        <ul><li>var tags = document.getElementsByTagName("head")</li></ul>
+        <li>querySelector / querySelectorAll</li>
+        <ul>
+            <li>var tag = document.querySelector("#highlight");</li>
+            <li>var tag = document.querySelector(".bolded");</li>
+            <li>var tag = document.querySelector("h1");</li>
+            <ul><li>select the first element among the h1</li></ul>
+            <li>var tags = document.querySelectorAll("h1");</li>
+        </ul>
+    </ol>
+</body>
+</html>

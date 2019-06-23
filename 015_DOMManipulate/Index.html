@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Example for addEventListener / get and set Attribute</h1>
+    <p>blah blah blahblah blah blahblah blah blahblah blah blahblah blah blah</p>
+    <a href="www.1.com">I am a link</a>
+    <!-- <img src="logo.png"> -->
+    <ul>
+        <li>blah</li>
+        <li>blah</li>
+        <li>blah</li>
+    </ul>
+
+</body>
+<script type="text/javascript">
+    var link = document.querySelector("a");
+    link.getAttribute("href");
+    link.setAttribute("href","www.google.com");
+
+    var img = document.querySelector("img");
+    img.setAttribute("src", "corgi.png");
+</script> 
+
+</html>
